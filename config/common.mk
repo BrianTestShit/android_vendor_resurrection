@@ -46,7 +46,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
+    ro.build.selinux=
+
+# Magisk Manager
+PRODUCT_PACKAGES += \
+    MagiskManager
+
+# Copy Magisk zip
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
 
 # Enable Google Assistant on all devices.
 PRODUCT_PROPERTY_OVERRIDES += \
